@@ -1,0 +1,208 @@
+{
+    "ac_kwargs":	{
+        "hidden_sizes":	[
+            64,
+            64
+        ]
+    },
+    "actor_critic":	"MLPActorCritic",
+    "clip_ratio":	0.2,
+    "env":	{
+        "<KukaReachEnv instance>":	{
+            "EndEffectorPos":	[
+                0.537,
+                0.0,
+                0.5
+            ],
+            "_actionRepeat":	200,
+            "a_high_action":	1,
+            "a_low_action":	-1,
+            "action_space":	{
+                "Box(3,)":	{
+                    "bounded_above":	"[ True  True  True]",
+                    "bounded_below":	"[ True  True  True]",
+                    "dtype":	"float32",
+                    "high":	"[0.4 0.4 0.4]",
+                    "low":	"[-0.4 -0.4 -0.6]",
+                    "np_random":	"RandomState(MT19937)",
+                    "shape":	[
+                        3
+                    ]
+                }
+            },
+            "attempted_grasp":	false,
+            "box_id":	0,
+            "current_a":	0,
+            "distance_before":	0,
+            "distance_before_obj_target":	0,
+            "distance_hand_obj_ori_before":	1,
+            "distance_ori_before":	0,
+            "distance_ori_before_obj_target":	0,
+            "end_effector_index":	6,
+            "fingerAForce":	2,
+            "fingerBForce":	2.5,
+            "fingerTipForce":	2,
+            "graspSuccess":	0,
+            "gripper_index":	7,
+            "gripper_length":	0.257,
+            "id_obstacle_pos":	"2",
+            "init_joint_positions":	[
+                0.006418,
+                0.413184,
+                -0.011401,
+                -2.689317,
+                0.005379,
+                2.137684,
+                -0.006539,
+                4.8e-05,
+                -0.299912,
+                0.0,
+                -4.3e-05,
+                0.29996,
+                0.0,
+                -0.0002
+            ],
+            "is_good_view":	false,
+            "is_render":	false,
+            "joint_damping":	[
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05
+            ],
+            "joint_ranges":	[
+                5.8,
+                4,
+                5.8,
+                4,
+                5.8,
+                4,
+                6
+            ],
+            "kuka_id":	2,
+            "lower_limits":	[
+                -0.967,
+                -2,
+                -2.96,
+                0.19,
+                -2.96,
+                -2.09,
+                -3.05
+            ],
+            "maxForce":	600.0,
+            "maxVelocity":	1.35,
+            "np_random":	"RandomState(MT19937)",
+            "num_joints":	14,
+            "object_hold":	false,
+            "object_id":	4,
+            "observation_space":	{
+                "Box(12,)":	{
+                    "bounded_above":	"[ True  True  True  True  True  True  True  True  True  True  True  True]",
+                    "bounded_below":	"[ True  True  True  True  True  True  True  True  True  True  True  True]",
+                    "dtype":	"float32",
+                    "high":	"[0.85 1.1  1.   0.85 1.1  1.   0.85 0.55 1.   0.85 0.55 1.  ]",
+                    "low":	"[ 0.15 -1.1   0.    0.15 -1.1   0.    0.15 -0.55  0.    0.15 -0.55  0.  ]",
+                    "np_random":	"RandomState(MT19937)",
+                    "shape":	[
+                        12
+                    ]
+                }
+            },
+            "orientation":	[
+                0.7071067811865475,
+                -0.7071067811865476,
+                4.329780281177466e-17,
+                4.329780281177467e-17
+            ],
+            "rest_poses":	[
+                0,
+                0,
+                0,
+                1.5707963267948966,
+                0,
+                -1.0367255756846319,
+                0
+            ],
+            "robot_state":	null,
+            "step_counter":	0,
+            "target_position":	[
+                0.4,
+                0.35,
+                0.05
+            ],
+            "terminated":	false,
+            "termination":	false,
+            "timeStep":	0.004166666666666667,
+            "upper_limits":	[
+                0.967,
+                2,
+                2.96,
+                2.29,
+                2.96,
+                2.09,
+                3.05
+            ],
+            "urdf_root_path":	"/home/meer/anaconda3/envs/spinningup/lib/python3.6/site-packages/pybullet_data",
+            "velocity":	[
+                0.005,
+                0,
+                0
+            ],
+            "x_high_action":	0.4,
+            "x_high_obs":	0.85,
+            "x_low_action":	-0.4,
+            "x_low_obs":	0.15,
+            "y_high_action":	0.4,
+            "y_high_obs":	0.55,
+            "y_low_action":	-0.4,
+            "y_low_obs":	-0.55,
+            "z_high_action":	0.4,
+            "z_high_obs":	1,
+            "z_low_action":	-0.6,
+            "z_low_obs":	0
+        }
+    },
+    "epochs":	1000,
+    "exp_name":	"ppo-kuka-reach",
+    "gamma":	0.99,
+    "lam":	0.97,
+    "logger":	{
+        "<ppo.logx.EpochLogger object at 0x7f083a2f6d68>":	{
+            "epoch_dict":	{},
+            "exp_name":	"ppo-kuka-reach",
+            "first_row":	true,
+            "is_debug":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"../../logs/ppo-kuka-reach/ppo-kuka-reach_s0",
+            "output_file":	{
+                "<_io.TextIOWrapper name='../../logs/ppo-kuka-reach/ppo-kuka-reach_s0/progress.txt' mode='w' encoding='UTF-8'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"ppo-kuka-reach",
+        "output_dir":	"../../logs/ppo-kuka-reach/ppo-kuka-reach_s0"
+    },
+    "max_ep_len":	1000,
+    "pi_lr":	0.0003,
+    "save_freq":	1,
+    "seed":	0,
+    "steps_per_epoch":	6000,
+    "target_kl":	0.01,
+    "train_pi_iters":	80,
+    "train_v_iters":	80,
+    "vf_lr":	0.001
+}
